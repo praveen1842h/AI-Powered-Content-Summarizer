@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block content %}
+
+<div class="history-page">
+
+    <div class="page-title">
+
+        <h1>
+
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            Summary History
+
+        </h1>
+
+        <p>
+
+            View all your previously generated summaries.
+
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <div class="history-search">
+
+            <input
+                type="text"
+                id="searchHistory"
+                placeholder="Search history...">
+
+        </div>
+
+    </div>
+
+    <br>
+
+    {% if history %}
+
+        {% for item in history %}
+
+        <div class="card history-card">
+
+            <div class="history-top">
+
+                <h3>
+
+                    Summary #{{ loop.index }}
+
+                </h3>
+
+                <span>
+
+                    {{ item.created_at }}
+
+                </span>
+
+            </div>
+
+            <hr>
+
+            <h4>
+
+                Original Text
+
+            </h4>
+
+            <p>
+
+                {{ item.original_text[:250] }}...
+
+            </p>
+
+            <br>
+
+            <h4>
+
+                Summary
+
+            </h4>
+
+            <p>
+
+                {{ item.summary }}
+
+            </p>
+
+            <div class="history-actions">
+
+                <button
+                    class="secondary-btn copy-history"
+                    data-summary="{{ item.summary }}">
+
+                    <i class="fa-solid fa-copy"></i>
+
+                    Copy
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="card empty-card">
+
+            <i class="fa-solid fa-folder-open fa-3x"></i>
+
+            <br><br>
+
+            <h2>
+
+                No History Found
+
+            </h2>
+
+            <p>
+
+                Generate your first summary to see it here.
+
+            </p>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+<script>
+
+document.querySelectorAll(".copy-history").forEach(button=>{
+
+    button.onclick=function(){
+
+        navigator.clipboard.writeText(
+
+            this.dataset.summary
+
+        );
+
+        alert("Summary copied.");
+
+    };
+
+});
+
+const search=document.getElementById("searchHistory");
+
+search.addEventListener("keyup",function(){
+
+    const value=this.value.toLowerCase();
+
+    document.querySelectorAll(".history-card").forEach(card=>{
+
+        card.style.display=
+
+        card.innerText.toLowerCase().includes(value)
+
+        ? "block"
+
+        : "none";
+
+    });
+
+});
+
+</script>
+
+{% endblock %}

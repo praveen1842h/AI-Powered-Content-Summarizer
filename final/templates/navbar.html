@@ -1,0 +1,110 @@
+<nav class="navbar">
+
+    <!-- Left -->
+
+    <div class="nav-left">
+
+        <a href="/" class="logo">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <span>SummarAI</span>
+
+        </a>
+
+    </div>
+
+    <!-- Center -->
+
+    <div class="nav-center">
+
+        {% if session.get("username") %}
+
+        <a href="/dashboard">Dashboard</a>
+
+        <a href="/history">History</a>
+
+        <a href="/profile">Profile</a>
+
+        {% endif %}
+
+    </div>
+
+    <!-- Right -->
+
+    <div class="nav-right">
+
+        <!-- Theme Toggle -->
+
+        <button
+            id="theme-toggle"
+            class="icon-btn"
+            title="Toggle Theme">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+        {% if session.get("username") %}
+
+        <div class="user-menu">
+
+            <button class="user-btn">
+
+                <i class="fa-solid fa-user-circle"></i>
+
+                {{ session["username"] }}
+
+            </button>
+
+            <div class="dropdown">
+
+                <a href="/profile">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Profile
+
+                </a>
+
+                <a href="/settings">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Settings
+
+                </a>
+
+                <hr>
+
+                <a href="/logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </div>
+
+        {% else %}
+
+        <a href="/login" class="nav-btn">
+
+            Login
+
+        </a>
+
+        <a href="/register" class="nav-btn primary">
+
+            Sign Up
+
+        </a>
+
+        {% endif %}
+
+    </div>
+
+</nav>

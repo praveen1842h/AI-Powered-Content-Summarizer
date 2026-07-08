@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        {% block title %}
+
+        SummarAI Pro
+
+        {% endblock %}
+
+    </title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+                <div>
+
+                    <h2>SummarAI</h2>
+
+                    <span>Pro Edition</span>
+
+                </div>
+
+            </div>
+
+            <nav>
+
+                <a href="{{ url_for('dashboard') }}">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+                <a href="{{ url_for('history') }}">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    History
+
+                </a>
+
+                <a href="{{ url_for('profile') }}">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Profile
+
+                </a>
+
+                <a href="{{ url_for('settings') }}">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Settings
+
+                </a>
+
+            </nav>
+
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <a
+                class="logout-btn"
+                href="{{ url_for('logout') }}">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h2>
+
+                    Welcome,
+
+                    {{ session.get('username','Guest') }}
+
+                </h2>
+
+            </div>
+
+        </header>
+
+        <!-- Flash Messages -->
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+
+        {% if messages %}
+
+            {% for category,message in messages %}
+
+                <div class="alert {{ category }}">
+
+                    {{ message }}
+
+                </div>
+
+            {% endfor %}
+
+        {% endif %}
+
+        {% endwith %}
+
+        {% block content %}
+
+        {% endblock %}
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/speech.js') }}"></script>
+
+</body>
+
+</html>

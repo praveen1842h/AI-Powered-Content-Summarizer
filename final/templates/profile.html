@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+{% block content %}
+
+<div class="profile-page">
+
+    <div class="page-title">
+
+        <h1>
+
+            <i class="fa-solid fa-user"></i>
+
+            My Profile
+
+        </h1>
+
+        <p>
+
+            Manage your SummarAI account.
+
+        </p>
+
+    </div>
+
+    <div class="profile-grid">
+
+        <!-- LEFT -->
+
+        <div class="card profile-card">
+
+            <div class="profile-avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <h2>
+
+                {{ user.username }}
+
+            </h2>
+
+            <p>
+
+                {{ user.email }}
+
+            </p>
+
+            <span class="join-date">
+
+                Joined
+
+                {{ user.created_at }}
+
+            </span>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="card">
+
+            <h2>
+
+                Account Information
+
+            </h2>
+
+            <br>
+
+            <table class="profile-table">
+
+                <tr>
+
+                    <td>
+
+                        Username
+
+                    </td>
+
+                    <td>
+
+                        {{ user.username }}
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+
+                        Email
+
+                    </td>
+
+                    <td>
+
+                        {{ user.email }}
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+
+                        Account Created
+
+                    </td>
+
+                    <td>
+
+                        {{ user.created_at }}
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="stats-grid">
+
+        <div class="card stat-card">
+
+            <h1>
+
+                {{ total_summaries }}
+
+            </h1>
+
+            <p>
+
+                Total Summaries
+
+            </p>
+
+        </div>
+
+        <div class="card stat-card">
+
+            <h1>
+
+                {{ total_words }}
+
+            </h1>
+
+            <p>
+
+                Total Words Summarized
+
+            </p>
+
+        </div>
+
+        <div class="card stat-card">
+
+            <h1>
+
+                {{ total_pdfs }}
+
+            </h1>
+
+            <p>
+
+                PDF Files Processed
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

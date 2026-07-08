@@ -1,0 +1,338 @@
+/* ==========================================================
+   AUTH PAGE
+   Login & Register
+========================================================== */
+
+/* ==========================================================
+   AUTH CONTAINER
+========================================================== */
+
+.auth-container{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:100px 20px;
+
+    background:
+    radial-gradient(circle at top,#4F7CFF22 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#7B5CFF22 0%,transparent 35%);
+
+}
+
+/* ==========================================================
+   AUTH CARD
+========================================================== */
+
+.auth-card{
+
+    width:100%;
+
+    max-width:520px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:28px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.auth-header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.auth-logo{
+
+    font-size:60px;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.auth-header h2{
+
+    margin-bottom:10px;
+
+}
+
+.auth-header p{
+
+    color:var(--text-secondary);
+
+}
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.auth-card form{
+
+    width:100%;
+
+}
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+}
+
+/* ==========================================================
+   PASSWORD
+========================================================== */
+
+.password-box{
+
+    position:relative;
+
+}
+
+.password-box input{
+
+    padding-right:50px;
+
+}
+
+.password-box i{
+
+    position:absolute;
+
+    top:50%;
+
+    right:18px;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:var(--text-muted);
+
+}
+
+/* ==========================================================
+   OPTIONS
+========================================================== */
+
+.auth-options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+.auth-options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.auth-options a{
+
+    color:var(--primary);
+
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.auth-card .primary-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    font-size:16px;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.auth-footer{
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+.auth-footer p{
+
+    color:var(--text-secondary);
+
+}
+
+.auth-footer a{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+.auth-footer a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================================
+   DIVIDER
+========================================================== */
+
+.auth-divider{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:30px 0;
+
+}
+
+.auth-divider::before,
+
+.auth-divider::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.auth-divider span{
+
+    color:var(--text-muted);
+
+    font-size:14px;
+
+}
+
+/* ==========================================================
+   SOCIAL LOGIN
+========================================================== */
+
+.social-login{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.social-btn{
+
+    flex:1;
+
+    padding:14px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.04);
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.social-btn:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/* ==========================================================
+   ERROR
+========================================================== */
+
+.error-message{
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================================
+   SUCCESS
+========================================================== */
+
+.success-message{
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.auth-card{
+
+    transition:.35s;
+
+}
+
+.auth-card:hover{
+
+    transform:translateY(-5px);
+
+}

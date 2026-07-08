@@ -1,0 +1,13 @@
+Flask==3.1.0
+Werkzeug==3.1.3
+transformers==4.53.0
+torch
+sentencepiece
+PyMuPDF
+python-docx
+Pillow
+requests
+numpy
+Flask
+Werkzeug
+PyPDF2

@@ -1,0 +1,249 @@
+/* ==========================================================
+   LIGHT THEME
+   SummarAI
+========================================================== */
+
+:root[data-theme="light"]{
+
+    --primary:#2563EB;
+    --primary-hover:#1D4ED8;
+
+    --secondary:#7C3AED;
+
+    --success:#16A34A;
+    --warning:#D97706;
+    --danger:#DC2626;
+
+    --bg:#F5F7FB;
+    --bg-secondary:#E9EEF8;
+
+    --surface:#FFFFFF;
+    --surface-light:#F8FAFC;
+
+    --border:#D6DEEB;
+
+    --text:#0F172A;
+    --text-secondary:#475569;
+    --text-muted:#64748B;
+
+}
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+:root[data-theme="light"] body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+}
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+:root[data-theme="light"] .navbar{
+
+    background:rgba(255,255,255,.92);
+
+    border-bottom:1px solid var(--border);
+
+    backdrop-filter:blur(18px);
+
+}
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+:root[data-theme="light"] .sidebar{
+
+    background:#FFFFFF;
+
+    border-right:1px solid var(--border);
+
+}
+
+:root[data-theme="light"] .sidebar-menu a{
+
+    color:var(--text-secondary);
+
+}
+
+:root[data-theme="light"] .sidebar-menu a:hover,
+
+:root[data-theme="light"] .sidebar-menu a.active{
+
+    background:var(--primary);
+
+    color:#FFFFFF;
+
+}
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+:root[data-theme="light"] .card,
+
+:root[data-theme="light"] .auth-card,
+
+:root[data-theme="light"] .summary-card,
+
+:root[data-theme="light"] .welcome-card,
+
+:root[data-theme="light"] .input-card,
+
+:root[data-theme="light"] .feature-card{
+
+    background:#FFFFFF;
+
+    border:1px solid var(--border);
+
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+
+}
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+:root[data-theme="light"] input,
+
+:root[data-theme="light"] textarea{
+
+    background:#FFFFFF;
+
+    color:var(--text);
+
+    border:1px solid var(--border);
+
+}
+
+:root[data-theme="light"] input::placeholder,
+
+:root[data-theme="light"] textarea::placeholder{
+
+    color:var(--text-muted);
+
+}
+
+/* ==========================================================
+   SUMMARY OUTPUT
+========================================================== */
+
+:root[data-theme="light"] #summary-text{
+
+    background:var(--surface-light);
+
+    border:1px solid var(--border);
+
+    color:var(--text);
+
+}
+
+/* ==========================================================
+   UPLOAD AREA
+========================================================== */
+
+:root[data-theme="light"] .upload-area{
+
+    background:#FFFFFF;
+
+    border-color:var(--border);
+
+}
+
+:root[data-theme="light"] .upload-area:hover{
+
+    background:#EEF4FF;
+
+    border-color:var(--primary);
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+:root[data-theme="light"] .secondary-btn{
+
+    background:#FFFFFF;
+
+    color:var(--text);
+
+    border:1px solid var(--border);
+
+}
+
+:root[data-theme="light"] .secondary-btn:hover{
+
+    background:#F3F6FB;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+:root[data-theme="light"] .footer{
+
+    background:#FFFFFF;
+
+    border-top:1px solid var(--border);
+
+}
+
+:root[data-theme="light"] .footer p{
+
+    color:var(--text-secondary);
+
+}
+
+/* ==========================================================
+   TABLES
+========================================================== */
+
+:root[data-theme="light"] table{
+
+    background:#FFFFFF;
+
+    color:var(--text);
+
+}
+
+:root[data-theme="light"] th{
+
+    background:#EEF3FF;
+
+}
+
+:root[data-theme="light"] td{
+
+    border-color:var(--border);
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+:root[data-theme="light"] ::-webkit-scrollbar-track{
+
+    background:#E5E7EB;
+
+}
+
+:root[data-theme="light"] ::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+}
+
+:root[data-theme="light"] ::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-hover);
+
+}

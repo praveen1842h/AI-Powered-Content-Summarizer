@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+{% block title %}
+Settings
+{% endblock %}
+
+{% block content %}
+
+<div class="settings-page">
+
+    <div class="page-title">
+
+        <h1>
+
+            <i class="fa-solid fa-gear"></i>
+
+            Settings
+
+        </h1>
+
+        <p>
+
+            Customize your SummarAI experience.
+
+        </p>
+
+    </div>
+
+    <form
+        action="{{ url_for('settings') }}"
+        method="POST">
+
+        <div class="card">
+
+            <h2>
+
+                Appearance
+
+            </h2>
+
+            <br>
+
+            <label>
+
+                Theme
+
+            </label>
+
+            <select
+                name="theme">
+
+                <option value="dark"
+                    {% if settings.theme=="dark" %}
+                    selected
+                    {% endif %}>
+
+                    Dark
+
+                </option>
+
+                <option value="light"
+                    {% if settings.theme=="light" %}
+                    selected
+                    {% endif %}>
+
+                    Light
+
+                </option>
+
+            </select>
+
+        </div>
+
+        <br>
+
+        <div class="card">
+
+            <h2>
+
+                Language
+
+            </h2>
+
+            <br>
+
+            <label>
+
+                Preferred Language
+
+            </label>
+
+            <select
+                name="language">
+
+                <option value="English">
+
+                    English
+
+                </option>
+
+                <option value="Tamil">
+
+                    Tamil
+
+                </option>
+
+            </select>
+
+        </div>
+
+        <br>
+
+        <div class="card">
+
+            <h2>
+
+                Account
+
+            </h2>
+
+            <br>
+
+            <p>
+
+                Logged in as
+
+                <strong>
+
+                    {{ session.get("username") }}
+
+                </strong>
+
+            </p>
+
+        </div>
+
+        <br>
+
+        <button
+            class="primary-btn"
+            type="submit">
+
+            <i class="fa-solid fa-floppy-disk"></i>
+
+            Save Settings
+
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

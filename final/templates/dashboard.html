@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard">
+
+    <div class="page-title">
+
+        <h1>AI Content Summarizer</h1>
+
+        <p>
+            Paste text or upload a PDF to generate an AI summary.
+        </p>
+
+    </div>
+
+    <div class="dashboard-grid">
+
+        <!-- LEFT COLUMN -->
+
+        <section class="card">
+
+            <h2>
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                Enter Text
+
+            </h2>
+
+            <form
+                id="summaryForm"
+                action="{{ url_for('summarize') }}"
+                method="POST">
+
+                <textarea
+                    id="inputText"
+                    name="text"
+                    placeholder="Paste your article, notes, assignment or any content here..."
+                    rows="16"></textarea>
+
+                <div class="button-row">
+
+                    <button
+                        class="primary-btn"
+                        type="submit">
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        Generate Summary
+
+                    </button>
+
+                    <button
+                        type="button"
+                        id="voiceBtn"
+                        class="secondary-btn">
+
+                        <i class="fa-solid fa-microphone"></i>
+
+                        Voice
+
+                    </button>
+
+                    <button
+                        type="button"
+                        id="clearBtn"
+                        class="secondary-btn">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Clear
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <!-- RIGHT COLUMN -->
+
+        <section class="card">
+
+            <h2>
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                Upload PDF
+
+            </h2>
+
+            <form
+                action="{{ url_for('upload_pdf') }}"
+                method="POST"
+                enctype="multipart/form-data">
+
+                <input
+                    type="file"
+                    name="pdf"
+                    accept=".pdf"
+                    required>
+
+                <br><br>
+
+                <button
+                    class="primary-btn"
+                    type="submit">
+
+                    Upload & Summarize
+
+                </button>
+
+            </form>
+
+            <hr>
+
+            <h2>
+
+                <i class="fa-solid fa-chart-simple"></i>
+
+                Text Details
+
+            </h2>
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <h3 id="wordCount">0</h3>
+
+                    <span>Words</span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3 id="characterCount">0</h3>
+
+                    <span>Characters</span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3 id="readingTime">0</h3>
+
+                    <span>Minutes</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="card summary-card">
+
+        <div class="summary-header">
+
+            <h2>
+
+                <i class="fa-solid fa-robot"></i>
+
+                AI Summary
+
+            </h2>
+
+            <button
+                id="copyBtn"
+                class="secondary-btn">
+
+                <i class="fa-solid fa-copy"></i>
+
+                Copy
+
+            </button>
+
+        </div>
+
+        <div id="summaryResult">
+
+            {% if summary %}
+
+                {{ summary }}
+
+            {% else %}
+
+                Your generated summary will appear here.
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

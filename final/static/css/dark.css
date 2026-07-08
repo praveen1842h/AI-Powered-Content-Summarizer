@@ -1,0 +1,115 @@
+/* ==========================================================
+   DARK THEME
+   SummarAI
+========================================================== */
+
+:root[data-theme="dark"]{
+
+    --primary:#4F7CFF;
+    --primary-hover:#3566F6;
+
+    --secondary:#7B5CFF;
+
+    --success:#22C55E;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+
+    --bg:#0F172A;
+    --bg-secondary:#17233A;
+
+    --surface:#1E293B;
+    --surface-light:#243349;
+
+    --border:#31425E;
+
+    --text:#FFFFFF;
+    --text-secondary:#CBD5E1;
+    --text-muted:#94A3B8;
+
+}
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+:root[data-theme="dark"] body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+}
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+:root[data-theme="dark"] .navbar{
+
+    background:rgba(15,23,42,.90);
+
+}
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+:root[data-theme="dark"] .sidebar{
+
+    background:rgba(24,34,53,.95);
+
+}
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+:root[data-theme="dark"] .card,
+
+:root[data-theme="dark"] .auth-card,
+
+:root[data-theme="dark"] .summary-card,
+
+:root[data-theme="dark"] .input-card,
+
+:root[data-theme="dark"] .welcome-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+:root[data-theme="dark"] input,
+
+:root[data-theme="dark"] textarea{
+
+    background:#1E293B;
+
+    color:white;
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+:root[data-theme="dark"] .secondary-btn{
+
+    border-color:rgba(255,255,255,.12);
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+:root[data-theme="dark"] .footer{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}

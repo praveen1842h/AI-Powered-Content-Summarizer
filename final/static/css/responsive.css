@@ -1,0 +1,348 @@
+/* ==========================================================
+   RESPONSIVE DESIGN
+   SummarAI
+========================================================== */
+
+/* ==========================================================
+   LARGE LAPTOPS
+========================================================== */
+
+@media (max-width:1400px){
+
+    .container{
+
+        width:95%;
+
+    }
+
+}
+
+/* ==========================================================
+   LAPTOP
+========================================================== */
+
+@media (max-width:1200px){
+
+    .hero h1{
+
+        font-size:48px;
+
+    }
+
+    .main-content{
+
+        padding:25px;
+
+    }
+
+    .workflow{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .sidebar{
+
+        width:90px;
+
+    }
+
+    .sidebar .menu-text,
+
+    .sidebar .logo-text,
+
+    .sidebar .logout-text{
+
+        display:none;
+
+    }
+
+    .main-content{
+
+        margin-left:90px;
+
+        width:calc(100% - 90px);
+
+    }
+
+    .hero{
+
+        padding:100px 20px 60px;
+
+    }
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+    .hero p{
+
+        font-size:17px;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .features{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:768px){
+
+    .navbar{
+
+        padding:15px;
+
+    }
+
+    .sidebar{
+
+        left:-270px;
+
+    }
+
+    .sidebar.active{
+
+        left:0;
+
+    }
+
+    .main-content{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:20px;
+
+    }
+
+    .hero{
+
+        min-height:75vh;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .primary-btn,
+
+    .secondary-btn{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+    .features{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .workflow{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .action-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .summary-actions{
+
+        flex-direction:column;
+
+    }
+
+    .quick-actions{
+
+        flex-direction:column;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width:576px){
+
+    .hero{
+
+        padding:80px 15px 50px;
+
+    }
+
+    .hero h1{
+
+        font-size:28px;
+
+    }
+
+    .hero p{
+
+        font-size:15px;
+
+    }
+
+    .auth-card{
+
+        padding:25px;
+
+    }
+
+    .welcome-card,
+
+    .summary-card,
+
+    .input-card{
+
+        padding:20px;
+
+    }
+
+    .upload-area{
+
+        padding:25px;
+
+    }
+
+    .upload-area i{
+
+        font-size:42px;
+
+    }
+
+    .profile-avatar{
+
+        width:80px;
+
+        height:80px;
+
+        font-size:30px;
+
+    }
+
+}
+
+/* ==========================================================
+   EXTRA SMALL DEVICES
+========================================================== */
+
+@media (max-width:400px){
+
+    h1{
+
+        font-size:24px;
+
+    }
+
+    h2{
+
+        font-size:22px;
+
+    }
+
+    h3{
+
+        font-size:18px;
+
+    }
+
+    .primary-btn,
+
+    .secondary-btn{
+
+        padding:14px;
+
+        font-size:14px;
+
+    }
+
+    input,
+
+    textarea{
+
+        font-size:14px;
+
+    }
+
+    .card{
+
+        border-radius:18px;
+
+    }
+
+}
+
+/* ==========================================================
+   LANDSCAPE MOBILE
+========================================================== */
+
+@media (max-height:600px){
+
+    .hero{
+
+        min-height:100vh;
+
+    }
+
+    .auth-container{
+
+        padding:30px 15px;
+
+    }
+
+}

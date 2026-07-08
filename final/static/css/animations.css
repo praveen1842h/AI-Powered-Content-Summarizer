@@ -1,0 +1,359 @@
+/* ==========================================================
+   ANIMATIONS
+   SummarAI
+========================================================== */
+
+/* ==========================================================
+   GLOBAL TRANSITIONS
+========================================================== */
+
+*{
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease;
+
+}
+
+/* ==========================================================
+   PAGE FADE
+========================================================== */
+
+body{
+
+    animation:pageFade .6s ease;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================================================
+   FADE UP
+========================================================== */
+
+.fade-up{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   FADE LEFT
+========================================================== */
+
+.fade-left{
+
+    animation:fadeLeft .7s ease forwards;
+
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ==========================================================
+   FADE RIGHT
+========================================================== */
+
+.fade-right{
+
+    animation:fadeRight .7s ease forwards;
+
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ==========================================================
+   SCALE IN
+========================================================== */
+
+.scale-in{
+
+    animation:scaleIn .5s ease;
+
+}
+
+@keyframes scaleIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.92);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ==========================================================
+   FLOAT
+========================================================== */
+
+.float{
+
+    animation:floatAnimation 4s ease-in-out infinite;
+
+}
+
+@keyframes floatAnimation{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   PULSE
+========================================================== */
+
+.pulse{
+
+    animation:pulseAnimation 2s infinite;
+
+}
+
+@keyframes pulseAnimation{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ==========================================================
+   SPINNER
+========================================================== */
+
+.spinner{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    border:5px solid rgba(255,255,255,.15);
+
+    border-top:5px solid var(--primary);
+
+    animation:spin .9s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================================
+   TYPING DOTS
+========================================================== */
+
+.typing{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.typing span{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    animation:typingBounce 1.2s infinite;
+
+}
+
+.typing span:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.typing span:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+@keyframes typingBounce{
+
+    0%,80%,100%{
+
+        transform:scale(.6);
+
+        opacity:.5;
+
+    }
+
+    40%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================================================
+   BUTTON HOVER
+========================================================== */
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================================
+   CARD HOVER
+========================================================== */
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ==========================================================
+   SMOOTH SCROLL
+========================================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}

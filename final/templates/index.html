@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block title %}
+SummarAI | AI-Powered Content Summarizer
+{% endblock %}
+
+{% block content %}
+
+{% include "navbar.html" %}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-badge">
+            ✨ AI-Powered Content Summarizer
+        </span>
+
+        <h1>
+            Summarize Long Content in Seconds
+        </h1>
+
+        <p>
+            Generate accurate summaries from articles, research papers,
+            documents, and PDFs using Artificial Intelligence.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="/register" class="primary-btn">
+
+                Get Started
+
+            </a>
+
+            <a href="/login" class="secondary-btn">
+
+                Login
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="features">
+
+    <div class="feature-card">
+
+        <i class="fa-solid fa-brain"></i>
+
+        <h3>AI Summarization</h3>
+
+        <p>
+            Generate concise summaries using a Transformer AI model.
+        </p>
+
+    </div>
+
+    <div class="feature-card">
+
+        <i class="fa-solid fa-file-pdf"></i>
+
+        <h3>PDF Upload</h3>
+
+        <p>
+            Upload PDF documents and summarize their content instantly.
+        </p>
+
+    </div>
+
+    <div class="feature-card">
+
+        <i class="fa-solid fa-microphone"></i>
+
+        <h3>Voice Input</h3>
+
+        <p>
+            Speak naturally and let the application summarize your ideas.
+        </p>
+
+    </div>
+
+    <div class="feature-card">
+
+        <i class="fa-solid fa-clock-rotate-left"></i>
+
+        <h3>History</h3>
+
+        <p>
+            Access all your previous summaries whenever you need them.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="preview">
+
+    <div class="preview-card">
+
+        <h2>Simple Workflow</h2>
+
+        <div class="workflow">
+
+            <div class="step">
+
+                <span>1</span>
+
+                <p>Paste Text or Upload PDF</p>
+
+            </div>
+
+            <div class="step">
+
+                <span>2</span>
+
+                <p>AI Generates Summary</p>
+
+            </div>
+
+            <div class="step">
+
+                <span>3</span>
+
+                <p>Copy or Download Result</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <p>
+
+        © 2026 SummarAI
+
+        • AI-Powered Content Summarizer
+
+    </p>
+
+</footer>
+
+{% endblock %}
